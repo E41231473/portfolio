@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: monospace;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  background-color: #222;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #007BFF;
+}
+
+section {
+  margin: 30px auto;
+  max-width: 800px;
+  background: white;
+  padding: 20px;
+  border-radius: 0;
+}
+
+#about p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+#profil {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+#profil img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+#profil h2 {
+  margin-bottom: 5px;
+}
+
+#profil p {
+  margin: 0;
+  color: #555;
+}
+
+/* Sosial media ikon */
+#profil .sosial-media {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+#profil .sosial-media a {
+  color: #333;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+#profil .sosial-media a:hover {
+  color: #0073e6;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.project-item {
+  width: 200px;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.project-item a {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.project-item a:hover {
+  text-decoration: underline;
+}
+
+#skills {
+  max-width: 800px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+}
+
+.skill-wrapper {
+  padding: 40px 60px 60px 60px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.skill-item i,
+.skill-item img {
+  font-size: 24px;
+  width: 30px;
+  height: 30px;
+}
+
+.skill-item img {
+  object-fit: contain;
+}
+
+.skill-item span {
+  width: 80px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ddd;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* Warna & level skill */
+.progress-bar.java::after {
+  width: 80%;
+  background-color: #f89820;
+}
+.progress-bar.php::after {
+  width: 85%;
+  background-color: #8892be;
+}
+.progress-bar.html::after {
+  width: 95%;
+  background-color: #e34c26;
+}
+.progress-bar.css::after {
+  width: 90%;
+  background-color: #264de4;
+}
+.progress-bar.python::after {
+  width: 75%;
+  background-color: #306998;
+}
+.progress-bar.sql::after {
+  width: 80%;
+  background-color: #f29111;
+}
+.progress-bar.js::after {
+  width: 70%;
+  background-color: #f0db4f; /* warna khas JavaScript */
+}
+.progress-bar.xml::after {
+  width: 80%;
+  background-color: #ff6600; /* oranye, bisa diganti */
+}
+
+/* Warna ikon skill */
+.skill-item i.fab.fa-java {
+  color: #f89820;
+}
+
+.skill-item i.fab.fa-php {
+  color: #8892be;
+}
+
+.skill-item i.fab.fa-html5 {
+  color: #e34c26;
+}
+
+.skill-item i.fab.fa-css3-alt {
+  color: #264de4;
+}
+
+.skill-item i.fab.fa-python {
+  color: #306998;
+}
+
+.skill-item i.fas.fa-database {
+  color: #f29111;
+}
+
+.skill-item i.fab.fa-js-square {
+  color: #f0db4f;
+}
+
+.skill-item i.fas.fa-code {
+  color: #ff6600;
+}
+
+#tools {
+  padding: 60px;
+  background: white;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+
+.tools-container {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.tools-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tools-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.tool-item {
+  flex: 0 0 auto;
+  font-size: 36px;
+  color: #333;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.tool-item:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.tool-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+#pengalaman {
+  max-width: 800px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 0;
+}
+
+#pengalaman h2 {
+  margin-bottom: 20px;
+}
+
+.experience {
+  margin-bottom: 20px;
+}
+
+.experience h3 {
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.experience ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.experience li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+#sertifikat {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 0px;
+  text-align: center;
+}
+
+#sertifikat h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.sertifikat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  background: #fdfdfd;
+}
+
+.sertifikat-img {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.sertifikat-detail {
+  padding: 20px;
+}
+
+.sertifikat-detail h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.sertifikat-detail p {
+  margin: 8px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
